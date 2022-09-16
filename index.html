@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essentiale Max</title>
+    <style>
+        @font-face {
+  font-family: "Oswald";
+  src: url(https://dl.dropboxusercontent.com/s/slbbpqat7sr5dc7/Oswald-SemiBold.ttf?dl=0) format("truetype");
+  src: url(https://dl.dropboxusercontent.com/s/6qkr183m7ur0zft/Oswald-ExtraLight.ttf?dl=0) format("truetype");
+  src: url(https://dl.dropboxusercontent.com/s/wvyj96o71kzx7gm/Oswald-Medium.ttf?dl=0) format("truetype");
+}
+@font-face {
+  font-family: "Oswald-light";
+  src: url(https://dl.dropboxusercontent.com/s/0g3cpv5oopf6go8/Oswald-Light.ttf?dl=0) format("truetype");
+}
+
+@-webkit-keyframes es-pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes es-pulse {
+  0% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes es-pulse2 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(175, 82, 24);
+    border-radius: 50%;
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(175, 82, 24, 0);
+    border-radius: 50%;
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(175, 82, 24, 0);
+    border-radius: 50%;
+  }
+}
+@keyframes es-pulse2 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(175, 82, 24);
+    border-radius: 50%;
+  }
+  70% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 10px rgba(175, 82, 24, 0);
+    border-radius: 50%;
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(175, 82, 24, 0);
+    border-radius: 50%;
+  }
+}
+@-webkit-keyframes es-pulse3 {
+  0% {
+    transform: scale(1);
+    filter: brightness(0);
+  }
+  70% {
+    transform: scale(1.1);
+    filter: brightness(1);
+  }
+  to {
+    transform: scale(1);
+    filter: brightness(0);
+  }
+}
+@keyframes es-pulse3 {
+  0% {
+    transform: scale(1);
+    filter: brightness(0);
+  }
+  70% {
+    transform: scale(1.1);
+    filter: brightness(1);
+  }
+  to {
+    transform: scale(1);
+    filter: brightness(0);
+  }
+}
+@-webkit-keyframes es-pulse4 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(241, 222, 211);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(175, 82, 24, 0.439);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(178, 108, 64, 0.291);
+  }
+}
+@keyframes es-pulse4 {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgb(241, 222, 211);
+  }
+  70% {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 10px rgba(175, 82, 24, 0.439);
+  }
+  to {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(178, 108, 64, 0.291);
+  }
+}
+img {
+  max-width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#es-essentiale-max.es-essentiale-max {
+  background-color: #fff;
+  color: #000;
+  line-height: 1.2;
+  font-size: 16px;
+  min-height: 400px;
+  max-width: 960px;
+  min-width: 320px;
+  padding: 0;
+  margin: 0;
+  font-family: "Oswald";
+  margin: 0 auto;
+}
+#es-essentiale-max.es-essentiale-max .es-kv {
+  min-height: 700px;
+  background-image: url(https://dl.dropboxusercontent.com/s/mhq4o94eqlfforl/kv_bg.png?dl=0);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-self: flex-end;
+}
+#es-essentiale-max.es-essentiale-max .es-kv__img {
+  align-self: flex-end;
+  width: 250px;
+  padding: 0 40px;
+  margin-left: 50px;
+}
+#es-essentiale-max.es-essentiale-max .es-kv__title {
+  align-self: flex-end;
+  padding: 0 20px;
+  font-weight: 600;
+  line-height: 1;
+}
+#es-essentiale-max.es-essentiale-max .es-kv__title p {
+  font-size: 60px;
+  font-family: "Oswald";
+  font-style: italic;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 2px 1px 6px #000;
+  color: #fff;
+}
+#es-essentiale-max.es-essentiale-max .es-kv__title p sup {
+  font-size: 30px;
+  margin: 10px;
+}
+#es-essentiale-max.es-essentiale-max .es-nav {
+  margin: 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#es-essentiale-max.es-essentiale-max .es-nav__single {
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#es-essentiale-max.es-essentiale-max .es-nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 45px;
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 2px 1px 1px #000;
+  font-size: 18px;
+  background-color: #bd3e00;
+}
+#es-essentiale-max.es-essentiale-max .es-nav__link:hover {
+  transition: 1s all ease-in-out;
+  background: rgb(164, 38, 24);
+  background: linear-gradient(191deg, rgb(164, 38, 24) 0%, rgb(226, 81, 15) 81%);
+  box-shadow: inset -3px 1px 31px -3px rgb(214, 211, 114);
+}
+#es-essentiale-max.es-essentiale-max .es-section__title {
+  margin: 0 auto;
+}
+#es-essentiale-max.es-essentiale-max .es-section__title p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 50px;
+  font-family: "Oswald";
+  font-style: italic;
+  font-weight: 600;
+}
+#es-essentiale-max.es-essentiale-max .es-section__title p sup {
+  font-size: 30px;
+  margin: 5px;
+}
+#es-essentiale-max.es-essentiale-max .es-when {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#es-essentiale-max.es-essentiale-max .es-when__text {
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.2;
+  font-family: "Oswald-light";
+  font-weight: bolder;
+}
+#es-essentiale-max.es-essentiale-max .es-when__text strong {
+  font-family: "Oswald";
+}
+#es-essentiale-max.es-essentiale-max .es-when__iconsCtn {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+#es-essentiale-max.es-essentiale-max .es-when__iconsCtnRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#es-essentiale-max.es-essentiale-max .es-when__iconsSingle {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#es-essentiale-max.es-essentiale-max .es-when__iconsSingle img {
+  width: 120px;
+  -webkit-animation: es-pulse2 2s infinite;
+          animation: es-pulse2 2s infinite;
+}
+#es-essentiale-max.es-essentiale-max .es-when__iconsSingle p {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+}
+#es-essentiale-max.es-essentiale-max .es-effect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#es-essentiale-max.es-essentiale-max .es-effect__text p {
+  font-size: 25px;
+  font-weight: 200;
+  font-family: "Oswald-light";
+  font-weight: bolder;
+}
+#es-essentiale-max.es-essentiale-max .es-effect__text sup {
+  font-size: 15px;
+}
+#es-essentiale-max.es-essentiale-max .es-effect__text strong {
+  font-family: "Oswald";
+}
+#es-essentiale-max.es-essentiale-max .es-effect__iconsCtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+#es-essentiale-max.es-essentiale-max .es-effect__iconsSingle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 300px;
+  margin: 20px;
+}
+#es-essentiale-max.es-essentiale-max .es-effect__iconsSingle img {
+  width: 120px;
+  -webkit-animation: es-pulse2 2s infinite;
+          animation: es-pulse2 2s infinite;
+}
+#es-essentiale-max.es-essentiale-max .es-effect__subtitle {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 600;
+}
+#es-essentiale-max.es-essentiale-max .es-effect__desc {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 200;
+  font-family: "Oswald-light";
+  font-weight: bolder;
+  line-height: 1.2;
+}
+#es-essentiale-max.es-essentiale-max .es-doubleDoze {
+  background-image: url(https://dl.dropboxusercontent.com/s/3wzeptr78weaoyc/section-bg.png?dl=0);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#es-essentiale-max.es-essentiale-max .es-doubleDoze__imgCtn {
+  position: relative;
+  position: -1;
+}
+#es-essentiale-max.es-essentiale-max .es-doubleDoze__liver {
+  margin-top: -40px;
+  width: 350px;
+  z-index: 100;
+  position: relative;
+}
+#es-essentiale-max.es-essentiale-max .es-doubleDoze__liverShadow {
+  position: absolute;
+  width: 400px;
+  left: 0;
+  z-index: 0;
+  -webkit-animation: es-pulse3 2s infinite;
+          animation: es-pulse3 2s infinite;
+}
+#es-essentiale-max.es-essentiale-max .es-doubleDoze__text {
+  font-size: 50px;
+  font-family: "Oswald";
+  font-style: italic;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 1px 6px #000;
+  color: #fff;
+  padding: 20px 0;
+}
+#es-essentiale-max.es-essentiale-max .es-doubleDoze__text sup {
+  font-size: 25px;
+  margin: 5px;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__text p {
+  font-size: 25px;
+  font-weight: 200;
+  font-family: "Oswald-light";
+  font-weight: bolder;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__text strong {
+  font-family: "Oswald";
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__MainCtn {
+  display: flex;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__secondCtn {
+  display: flex;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__secondCtn img {
+  width: 400px;
+  align-self: center;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__thirdCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__textCtn--regeneracja {
+  margin-top: 100px;
+  margin-right: -20px;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__textCtn--ochrona {
+  margin-left: -40px;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__textCtn--wzmocnienie {
+  margin-top: 40px;
+  margin-left: -40px;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__subtitle {
+  color: #a52903;
+  font-style: italic;
+  font-size: 20px;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__desc {
+  font-family: "Oswald-light";
+  font-weight: bolder;
+  line-height: 1.2;
+  font-size: 20px;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__claim {
+  text-align: center;
+  font-size: 20px;
+}
+#es-essentiale-max.es-essentiale-max .es-benefits__claim p {
+  font-family: "Oswald-light";
+  font-weight: bolder;
+}
+#es-essentiale-max.es-essentiale-max .es-doze {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#es-essentiale-max.es-essentiale-max .es-doze__iconsCtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#es-essentiale-max.es-essentiale-max .es-doze__iconSingle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+}
+#es-essentiale-max.es-essentiale-max .es-doze__iconSingle img {
+  width: 120px;
+  -webkit-animation: es-pulse2 2s infinite;
+          animation: es-pulse2 2s infinite;
+}
+#es-essentiale-max.es-essentiale-max .es-doze__subtitle {
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.2;
+  font-size: 25px;
+  font-weight: 600;
+}
+#es-essentiale-max.es-essentiale-max .es-doze__claim {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Oswald-light";
+  font-weight: bolder;
+  line-height: 1.2;
+}
+#es-essentiale-max.es-essentiale-max .es-liverCheck {
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#es-essentiale-max.es-essentiale-max .es-liverCheck__title p {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#es-essentiale-max.es-essentiale-max .es-liverCheck__subtitle p {
+  font-size: 30px;
+  margin-top: 20px;
+  padding-top: 0;
+  font-weight: 200;
+  font-family: "Oswald-light";
+  font-weight: bolder;
+}
+#es-essentiale-max.es-essentiale-max .es-liverCheck__logo {
+  width: 220px;
+  margin-bottom: 40px;
+}
+#es-essentiale-max.es-essentiale-max .es-liverCheck__qr {
+  width: 220px;
+}
+#es-essentiale-max.es-essentiale-max .es-cross {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://dl.dropboxusercontent.com/s/gtn4inruf4ncvzf/cross-bg.png?dl=0);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 60%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+#es-essentiale-max.es-essentiale-max .es-cross__mainCtn {
+  display: flex;
+  flex-wrap: wrap;
+}
+#es-essentiale-max.es-essentiale-max .es-cross__singleProduct {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#es-essentiale-max.es-essentiale-max .es-cross__packshot {
+  width: 250px;
+}
+#es-essentiale-max.es-essentiale-max .es-cross__packshot:hover {
+  scale: 1.05;
+  transition: 0.5s all ease-in-out;
+}
+#es-essentiale-max.es-essentiale-max .es-cross__name p {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-shadow: 2px 1px 6px #000;
+}
+#es-essentiale-max.es-essentiale-max .es-cross__desc p {
+  color: #fff;
+  font-size: 20px;
+  margin-top: 0;
+  text-shadow: 2px 1px 6px #000;
+}
+#es-essentiale-max.es-essentiale-max .es-cross__link {
+  margin: 30px;
+}
+#es-essentiale-max.es-essentiale-max .es-cross__link a {
+  background-color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-family: "Oswald";
+  font-weight: 600;
+  font-size: 20px;
+  padding: 5px 30px;
+  border-radius: 25px;
+  box-shadow: 11px 7px 25px -11px rgb(66, 68, 90);
+  -webkit-animation: es-pulse4 2s infinite;
+          animation: es-pulse4 2s infinite;
+}
+#es-essentiale-max.es-essentiale-max .es-cross__link a:hover {
+  transition: 1s;
+  background-color: transparent;
+  outline: 3px solid #fff;
+  color: #fff;
+}
+#es-essentiale-max.es-essentiale-max .es-footer {
+  background-color: #a12904;
+  margin-top: 0;
+  padding-bottom: 0;
+}
+#es-essentiale-max.es-essentiale-max .es-footer__logoCtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+#es-essentiale-max.es-essentiale-max .es-footer__logoCtn p {
+  color: #fff;
+  font-size: 12px;
+}
+#es-essentiale-max.es-essentiale-max .es-footer__claims {
+  margin: 20px;
+  border-bottom: 1px solid #fff;
+}
+#es-essentiale-max.es-essentiale-max .es-footer__claims p {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.2;
+  font-family: "Oswald-light";
+  font-weight: bolder;
+}
+#es-essentiale-max.es-essentiale-max .es-footer__end {
+  padding: 10px;
+}
+#es-essentiale-max.es-essentiale-max .es-footer__end p {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.2;
+  text-align: center;
+  font-family: "Oswald-light";
+  font-weight: bolder;
+}
+
+@media (max-width: 700px) {
+  #es-essentiale-max.es-essentiale-max .es-kv {
+    background-image: url(https://dl.dropboxusercontent.com/s/hfjidqlvpq2cgod/kv-bg-mobile.png?dl=0);
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #es-essentiale-max.es-essentiale-max .es-kv__img {
+    align-self: center;
+    margin-left: 0;
+    padding: 0;
+    width: 280px;
+  }
+  #es-essentiale-max.es-essentiale-max .es-kv__title {
+    align-self: center;
+  }
+  #es-essentiale-max.es-essentiale-max .es-nav {
+    flex-direction: column;
+  }
+  #es-essentiale-max.es-essentiale-max .es-nav__single {
+    min-width: 200px;
+    text-align: center;
+  }
+  #es-essentiale-max.es-essentiale-max .es-doubleDoze {
+    background-size: cover;
+    justify-content: center;
+  }
+  #es-essentiale-max.es-essentiale-max .es-doubleDoze__liver {
+    margin-top: -40px;
+  }
+  #es-essentiale-max.es-essentiale-max .es-doubleDoze__text {
+    text-align: center;
+    margin-top: 0;
+  }
+  #es-essentiale-max.es-essentiale-max .es-benefits__MainCtn {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #es-essentiale-max.es-essentiale-max .es-benefits__secondCtn {
+    display: none;
+  }
+  #es-essentiale-max.es-essentiale-max .es-benefits__text {
+    text-align: center;
+  }
+  #es-essentiale-max.es-essentiale-max .es-benefits__textCtn--regeneracja {
+    margin-top: 0;
+    margin-right: 0;
+  }
+  #es-essentiale-max.es-essentiale-max .es-benefits__textCtn--ochrona {
+    margin-left: 0;
+  }
+  #es-essentiale-max.es-essentiale-max .es-benefits__textCtn--wzmocnienie {
+    margin-top: 0;
+    margin-left: 0;
+  }
+  #es-essentiale-max.es-essentiale-max .es-liverCheck__subtitle {
+    text-align: center;
+  }
+  #es-essentiale-max.es-essentiale-max .es-cross {
+    background-image: none;
+    background: linear-gradient(0deg, #a12904 80%, #fff 20%);
+  }
+  #es-essentiale-max.es-essentiale-max .es-cross__mainCtn {
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */
+    </style>
+</head>
+<body>
+   <div class="es-essentiale-max" id="es-essentiale-max">
+    <div class="es-kv">
+        <div class="es-kv__img">
+            <img src="https://dl.dropboxusercontent.com/s/rcce71q427zs1ph/kv-packshot.png?dl=0" alt="essentiale max">
+        </div>
+        <div class="es-kv__title">
+            <p>odwracaj <br> uszkodzenia <br> wątroby<sup>1</sup></p>
+        </div>
+    </div>
+    <div class="es-nav">
+        <div class="es-nav__single">
+            <a href="#es-when" class="es-nav__link">essentiale max</a>
+        </div>
+        <div class="es-nav__single">
+            <a href="#es-effect" class="es-nav__link">jak działa</a>
+        </div>
+        <div class="es-nav__single">
+            <a href="#es-benefits" class="es-nav__link">substancja czynna</a>
+        </div>
+        <div class="es-nav__single">
+            <a href="#es-doze" class="es-nav__link">dawkowanie</a>
+        </div>
+        <div class="es-nav__single">
+            <a href="#es-liverCheck" class="es-nav__link">sprawdź swoją wątrobę</a>
+        </div>
+    </div>
+    <div class="es-section__title" id="es-when">
+        <p>podwójna dawka <br> w jednej kapsułce<sup>2</sup></p>
+    </div>
+    <div class="es-when">
+        <div class="es-when__text">
+            <p><strong>ESSENTIALE<sup>®</sup> MAX</strong>
+                to lek, a nie suplement. Stosowany jest przy <br> dolegliwościach / objawach chorób wątroby, takich jak:
+            </p>
+        </div>
+        <div class="es-when__iconsCtn">
+            <div class="es-when__iconsCtnRow">
+                <div class="es-when__iconsSingle">
+                    <img src="https://dl.dropboxusercontent.com/s/nclthudh7qqvsjj/icon-1.png?dl=0" alt="">
+                    <p>uczucie pełności<sup>3</sup></p>
+                </div>
+    
+                <div class="es-when__iconsSingle">
+                    <img src="https://dl.dropboxusercontent.com/s/wgyxz82s69oligu/icon-2.png?dl=0" alt="">
+                    <p>ból w prawym nadbrzuszu<sup>3</sup></p>
+                </div>
+            </div>
+            <div class="es-when__iconsCtnRow">
+                <div class="es-when__iconsSingle">
+                    <img src="https://dl.dropboxusercontent.com/s/h81u4y4xmgwuayn/icon-3.png?dl=0" alt="">
+                    <p>zmęczenie i osłabienie<sup>4</sup></p>
+                </div>
+    
+                <div class="es-when__iconsSingle">
+                    <img src="https://dl.dropboxusercontent.com/s/i4majoih3fdbbo8/icon-4.png?dl=0" alt="">
+                    <p>spadek formy<sup>4</sup></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="es-sectionImg">
+        <img src="https://dl.dropboxusercontent.com/s/vyrgcwlc5ssgn9h/liver-photo.png?dl=0" alt="">
+    </div>
+    <div class="es-effect" id="es-effect">
+        <div class="es-effect__text">
+            <p>Jak działa <strong>ESSENTIALE<sup>®</sup> MAX</strong>?<sup>1</sup></p>
+        </div>
+        <div class="es-effect__iconsCtn">
+            <div class="es-effect__iconsSingle">
+                <img src="https://dl.dropboxusercontent.com/s/oot0ov824e4um26/icon-5.png?dl=0" alt="">
+                <p class="es-effect__subtitle">
+                    Regeneracja <br>
+                    uszkodzonych komórek <br> wątroby
+                </p>
+                <p class="es-effect__desc">
+                    Essentiale Max wspiera regenerację <br>
+                    uszkodzonych komórek wątrobowych <br> dzięki
+                    fosfolipidom niezbędnym, które <br>
+                    są substancją czynną leku.
+                </p>
+            </div>
+            <div class="es-effect__iconsSingle">
+                <img src="https://dl.dropboxusercontent.com/s/ixh4gssw7fsammh/icon-6.png?dl=0" alt="">
+                <p class="es-effect__subtitle">
+                    REDUKCJA DOLEGLIWOŚCI <br> SPOWODOWANYCH <br> USZKODZENIEM WĄTROBY
+                </p>
+                <p class="es-effect__desc">
+                    Lek zmniejsza subiektywne dolegliwości: <br>
+                    brak apetytu, uczucie ucisku w prawym <br> 
+                    nadbrzuszu spowodowane uszkodzeniem <br>
+                    wątroby w wyniku nieprawidłowej diety, <br>
+                    działania substancji toksycznych lub <br>
+                    w przebiegu zapalenia wątroby.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="es-doubleDoze" id="es-benefits">
+        <div class="es-doubleDoze__imgCtn">
+        <img src="https://dl.dropboxusercontent.com/s/zvhy3sbbq2ph0p0/liver-img.png?dl=0" alt="" class="es-doubleDoze__liver">
+        <img src="https://dl.dropboxusercontent.com/s/hjbs8c5tancndm9/liver-img-shadow.png?dl=0" alt="" class="es-doubleDoze__liverShadow">
+        </div>
+        <p class="es-doubleDoze__text">Podwójna dawka <br> niezbędnych <br> fosfolipidów<sup>2</sup> </p>
+    </div>
+
+    <div class="es-benefits">
+        <div class="es-benefits__text">
+            <p><strong>ESSENTIALE<sup>®</sup>MAX</strong> zawiera niezbędne fosfolipidy, które: </p>
+        </div>
+        <div class="es-benefits__MainCtn">
+            <div class="es-benefits__firstCtn">
+                <div class="es-benefits__textCtn es-benefits__textCtn--regeneracja">
+                    <p class="es-benefits__subtitle">REGENERACJA<sup>1</sup></p>
+                <p class="es-benefits__desc">
+                    Przyspieszają regenerację wątroby,<br> stabilizują błony komórkowe, hamują <br> utlenianie lipidów oraz syntezę kolagenu. 
+                </p>
+                </div>
+            </div>
+            <div class="es-benefits__secondCtn">
+                <img src="https://dl.dropboxusercontent.com/s/80wrf4hkzjj0atv/benefits.png?dl=0" alt="">
+            </div>
+            <div class="es-benefits__thirdCtn">
+                <div class="es-benefits__textCtn es-benefits__textCtn--ochrona">
+                    <p class="es-benefits__subtitle">OCHRONA<sup>1</sup></p>
+                <p class="es-benefits__desc">
+                    Działają wątrobochronnie, w ostrych <br> uszkodzeniach wątroby spowodowanych <br> m.in alkoholem, paracetamolem<sup>3</sup>. 
+                </p>
+                </div>
+                <div class="es-benefits__textCtn es-benefits__textCtn--wzmocnienie">
+                    <p class="es-benefits__subtitle">WZMOCNIENIE<sup>1</sup></p>
+                <p class="es-benefits__desc">
+                    Zaobserwowano również hamowanie <br> stłuszczenia i zwłóknienia wątroby<sup>3</sup>.
+                </p>
+                </div>
+            </div>
+        </div>
+        <div class="es-benefits__claim">
+            <p> 1 kapsułka zawiera 600 mg fosfolipidów z nasion sojowych <br>
+                zawierających (3-sn-fosfatydylo) cholinę.
+                </p>
+        </div>
+    </div>
+    <div class="es-sectionBreak">
+        <img src="https://dl.dropboxusercontent.com/s/oq3mi6iquilnbtg/silver-line.png?dl=0" alt="">
+    </div>
+    <div class="es-doze" id="es-doze">
+        <div class=" es-doze__title es-section__title">
+            <p>dawkowanie<sup>3</sup></p>
+        </div>
+        <div class="es-doze__iconsCtn">
+            <div class="es-doze__iconSingle">
+                <img src="https://dl.dropboxusercontent.com/s/64plkmuk1bb3h4z/icon-7.png?dl=0" alt="">
+                <p class="es-doze__subtitle">dorośli i dzieci <br> powyżej 12 roku   </p>
+            </div>
+            <div class="es-doze__iconSingle">
+                <img src="https://dl.dropboxusercontent.com/s/dsu68nsd2g8agvv/icon-8.png?dl=0" alt="">
+                <p class="es-doze__subtitle">1 kapsułka <br> 3 razy na dobę</p>
+            </div>
+        </div>
+        <div class="es-doze__claim">
+            <p>Kapsułki należy przyjmować w czasie posiłków, nie rozgryzając <br>
+            (popijając, np. szklanką wody).
+            </p>
+        </div>
+    </div>
+    <div class="es-sectionBreak">
+        <img src="https://dl.dropboxusercontent.com/s/oq3mi6iquilnbtg/silver-line.png?dl=0" alt="">
+    </div>
+    <div class="es-liverCheck" id="es-liverCheck">
+        <div class=" es-liverCheck__title es-section__title">
+            <p>sprawdź swoją wątrobę</p>
+        </div>
+        <div class="es-liverCheck__subtitle">
+            <p>Wątroba się sprawdza. Zrób test!</p>
+        </div>
+        <img src="https://dl.dropboxusercontent.com/s/3tegkejgzzh5gcg/logo.png?dl=0" alt="" class="es-liverCheck__logo">
+        <img src="https://dl.dropboxusercontent.com/s/irfz2ehx0q4o42o/qr-code.png?dl=0" alt="" class="es-liverCheck__qr">
+    </div>
+    <div class="es-sectionBreak">
+        <img src="https://dl.dropboxusercontent.com/s/oq3mi6iquilnbtg/silver-line.png?dl=0" alt="">
+    </div>
+    <div class="es-cross">
+        <div class=" es-cross__title es-section__title">
+            <p>zadbaj o swoją wątrobę <br> z essentiale max</p>
+        </div>
+        <div class="es-cross__mainCtn">
+            <div class="es-cross__singleProduct">
+                <img src="https://dl.dropboxusercontent.com/s/vg7rz1ceuhon9jz/essentiale-forte.png?dl=0" alt="" class="es-cross__packshot">
+                <div class="es-cross__name">
+                    <p>Essentiale<sup>®</sup> forte </p>
+                </div>
+                <div class="es-cross__desc">
+                    <p>50 kapsułek</p>
+                </div>
+                <div class="es-cross__link">
+                    <a href="https://www.aptekaolmed.pl/produkt/essentiale-forte-300-mg-50-
+                    kapsulek,15493.html?poz=1" target="_blank">sprawdź</a>
+                </div>
+            </div>
+
+            <div class="es-cross__singleProduct">
+                <img src="https://dl.dropboxusercontent.com/s/thjjo8rzpl3whyq/essentiale-max.png?dl=0" alt="" class="es-cross__packshot">
+                <div class="es-cross__name">
+                    <p>Essentiale<sup>®</sup> max </p>
+                </div>
+                <div class="es-cross__desc">
+                    <p>30 kapsułek</p>
+                </div>
+                <div class="es-cross__link">
+                    <a href="https://www.aptekaolmed.pl/produkt/essentiale-max-30-
+                    kapsulek,15880.html?poz=1" target="_blank">sprawdź</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="es-footer">
+        <div class="es-footer__logoCtn">
+            <p>MAT-PL-2201590</p>
+            <img src="https://dl.dropboxusercontent.com/s/e2hoi6adox9bakh/sanofi-logo.png?dl=0" alt="">
+        </div>
+        <div class="es-footer__claims">
+            <p>
+                *Essentiale<sup>®</sup> MAX, kapsułki twarde, 600 mg fosfolipidów z nasion sojowych zawierających (3- sn-fosfatydylo)cholinę. Wskazania: roślinny produkt leczniczy stosowany w chorobach wątroby.
+                Zmniejsza dolegliwości, jak: brak apetytu, uczucie ucisku w prawym nadbrzuszu spowodowane uszkodzeniem wątroby w wyniku nieprawidłowej diety, działania substancji toksycznych lub zapalenia
+                wątroby. Przeciwwskazania: nadwrażliwość na substancję czynną, soję, orzeszki ziemne lub substancje pomocnicze. (ChPL 04.2022) Podmiot odpowiedzialny: Opella Healthcare Poland Sp. z o.o. <br><br>
+
+                1 Wykazano w modelach eksperymentalnych. Brak szczegółowych badań farmakodynamicznych u ludzi. Lieber CS et al. Phosphatidylocholine protects against fibrosis and cirrhosis in the baboon. <br>
+                2 W porównaniu z Essentiale® Forte. Essentiale® Max zawiera 600 mg fosfolipidów niezbędnych w 1 kapsułce, Essentiale® Forte zawiera 300 mg w jednej kapsułce. CHPL Essentiale® Forte/Max 04.2022. <br>
+                Gastroenterology 1994; 106: 152-159.: Gundermann KJ et al. Activity of Essential Phospholipids (EPL) From Soybeen in Liver Diseases. Pharmacol Rep 2011; 63(3): 643-59. CHPL Essentiale® Max 04.2022. <br>
+                3 CHPL Essentiale Max 04.2022. <br>
+                4 Swain MG Fatigue in liver disease: Pathophysiology and clinical management Can J Gastroenterol Vol 20 No 3 March 2006.
+            </p>
+        </div>
+        <div class="es-footer__end">
+            <p>Przed użyciem zapoznaj się z ulotką, która zawiera wskazania, przeciwwskazania, dane dotyczące działań niepożądanych
+                i dawkowanie oraz informacje dotyczące stosowania produktu leczniczego, bądź skonsultuj się z lekarzem lub farmaceutą,
+                gdyż każdy lek niewłaściwie stosowany zagraża Twojemu życiu lub zdrowiu.
+                </p>
+        </div>
+    </div>
+
+   </div> 
+</body>
+</html>
